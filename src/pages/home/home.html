@@ -1,14 +1,31 @@
+
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Shop Finder</ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+<ion-list>
+  <ion-item (click)=itemTapped()>
+
+  <ion-card>
+    <img src="https://data.luebeck-tourismus.de/typo3temp/GB/csm_shutterstock_73748515_01_cf1fd34057_519ffe33ac.jpg">
+    <div class="card-title">Restaurant</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="http://besthomenews.com/wp-content/uploads/2010/02/5.jpg">
+    <div class="card-title">Clothing</div>
+  </ion-card>
+
+  <ion-card>  
+    <img src="http://www.thesfnews.com/wp-content/uploads/2016/12/grocery-store.jpg">
+    <div class="card-title">Grocery</div>
+  </ion-card>
+
+  </ion-item>
+</ion-list>
 </ion-content>
