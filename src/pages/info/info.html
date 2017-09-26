@@ -18,10 +18,20 @@
   <img src="https://thumbs.dreamstime.com/t/indian-food-chapati-flat-bread-placed-folded-banana-leaf-made-wheat-flour-dough-traditional-65218044.jpg">
 
   <ion-card-content>
-  	  <ion-icon name="call">    012344566 </ion-icon> <br>
-  	  <ion-icon name="pin">    1234, PJ  </ion-icon> <br>
-  	<button ion-button full (click)=itemTapped()>Map</button>
+  <ion-list>
 
+
+  	<ion-item>
+  		<ion-icon name="pin"></ion-icon>1234, PJ
+    		<button ion-button outline item-end icon-left (click)=itemTapped()>View Map</button>
+  	</ion-item>
+
+	<ion-item>
+  		<ion-icon name="call"></ion-icon> 012344566 
+    		<button ion-button outline item-end icon-left (click)="launchDialer('+60194147321')">Call Now</button>
+  	</ion-item>
+
+  </ion-list>
   </ion-card-content>
 
   <ion-row>
