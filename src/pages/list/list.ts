@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InfoPage } from '../info/info';
+
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+import { HttpProvider} from '../../providers/http/http'
 /**
  * Generated class for the ListPage page.
  *
@@ -13,17 +17,36 @@ import { InfoPage } from '../info/info';
   selector: 'page-list',
   templateUrl: 'list.html',
 })
+
+
 export class ListPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  shopList =[]
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListPage');
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+  public httpprovider: HttpProvider) {}
 
- itemTapped(){
-  	this.navCtrl.push(InfoPage);
+ ionViewDidLoad() {
+ this.httpprovider.getShop()
+  	.subscribe(
+    	data => {
+      		console.log(data)
+      		this.shopList = data;
+    	},
+
+    	err => {
+      	console.log(err);
+    	},
+
+    	()=>{
+      	console.log('everything is done!!!')
+    	}
+
+   	);
+ }
+
+ itemTapped(shop){
+  	this.navCtrl.push(InfoPage, {shop:shop});
  }
 
 

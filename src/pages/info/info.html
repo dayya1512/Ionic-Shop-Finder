@@ -9,30 +9,29 @@
 
 <ion-content class="card-background-page">
 <ion-card>
-
   <ion-item>
-  	<h1>Chappati Express</h1>
-  	<p>Indian, Pizza</p>
+    <h2>{{shopInfo.name}}</h2>
+    <p>{{shopInfo.description}}</p>
   </ion-item>
-
-  <img src="https://thumbs.dreamstime.com/t/indian-food-chapati-flat-bread-placed-folded-banana-leaf-made-wheat-flour-dough-traditional-65218044.jpg">
+  <img src="{{shopInfo.image}}">
 
   <ion-card-content>
   <ion-list>
 
-
   	<ion-item>
-  		<ion-icon name="pin"></ion-icon>1234, PJ
+  		<ion-icon name="pin"></ion-icon>{{shopInfo.address}}
     		<button ion-button outline item-end icon-left (click)=itemTapped()>View Map</button>
   	</ion-item>
 
 	<ion-item>
-  		<ion-icon name="call"></ion-icon> 012344566 
+  		<ion-icon name="call"></ion-icon>{{shopInfo.phone}}
     		<button ion-button outline item-end icon-left (click)="launchDialer('+60194147321')">Call Now</button>
   	</ion-item>
 
   </ion-list>
   </ion-card-content>
+
+
 
   <ion-row>
     <ion-col>

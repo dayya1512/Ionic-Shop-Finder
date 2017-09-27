@@ -11,6 +11,9 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { InfoPage } from '../pages/info/info';
 import { MapPage } from '../pages/map/map';
+import { HttpProvider } from '../providers/http/http';
+import { HttpModule } from '@angular/http'
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { MapPage } from '../pages/map/map';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +41,8 @@ import { MapPage } from '../pages/map/map';
     SplashScreen,
      Geolocation,
      CallNumber,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpProvider
   ]
 })
 export class AppModule {}

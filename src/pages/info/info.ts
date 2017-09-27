@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MapPage } from '../map/map';
 import { CallNumber } from '@ionic-native/call-number';
+
 /**
  * Generated class for the InfoPage page.
  *
@@ -16,11 +17,15 @@ import { CallNumber } from '@ionic-native/call-number';
 })
 export class InfoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private callNumber: CallNumber) {
+  shopInfo =[]
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private callNumber: CallNumber,) {
+
+  	 this.shopInfo =navParams.get('shop');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InfoPage');
+   console.log('ionViewDidLoad InfoPage');
   }
 
   itemTapped(){
