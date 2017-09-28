@@ -11,6 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { InfoPage } from '../pages/info/info';
 import { MapPage } from '../pages/map/map';
+import { CommentPage } from '../pages/comment/comment';
 import { HttpProvider } from '../providers/http/http';
 import { HttpModule } from '@angular/http'
 
@@ -22,6 +23,7 @@ import { HttpModule } from '@angular/http'
     ListPage,
     InfoPage,
     MapPage,
+    CommentPage
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { HttpModule } from '@angular/http'
     ListPage,
     InfoPage,
     MapPage,
+    CommentPage
   ],
   providers: [
     StatusBar,

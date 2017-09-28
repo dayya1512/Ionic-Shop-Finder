@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MapPage } from '../map/map';
+import { CommentPage } from '../comment/comment';
 import { CallNumber } from '@ionic-native/call-number';
 
 /**
@@ -37,5 +38,11 @@ export class InfoPage {
        .then(() => console.log('Launched dialer!'))
        .catch(() => console.log('Error launching dialer'));
   }
+
+
+	commentTapped(){
+  	this.navCtrl.push(CommentPage);
+  }
+
 
 }
